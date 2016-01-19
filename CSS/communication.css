@@ -1,0 +1,24 @@
+li{
+    text-align: left;
+}
+
+p{
+    font-size: x-large;
+    text-align: left;
+}
+
+input:not(#button){
+    width: 150%;
+    margin-top: 10%;
+}
+
+table{
+    margin-left: 25%;
+}
+
+
+textarea{
+    margin-top: 10%;
+    width: 200%;
+    height: 30ch;
+}

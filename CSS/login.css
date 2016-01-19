@@ -1,0 +1,27 @@
+section{
+    margin-left: 40%;
+    margin-right: 30%;
+    background-color: #FFFFFF;
+}
+
+h2{
+    text-align: center;
+}
+
+form{
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Arimo', sans-serif;
+
+}
+
+input {
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+input[type=submit]{
+    margin-left: 25%;
+    width: 15em;
+    height: 2em;
+}

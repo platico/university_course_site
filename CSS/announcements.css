@@ -1,0 +1,14 @@
+#top_button{
+    text-align: right;
+    font-size: 200%;
+}
+
+table{
+    margin-bottom: 5%;
+    margin-left: 10%;
+    border-bottom: solid;
+}
+
+td{
+    padding-bottom: 1em;
+}

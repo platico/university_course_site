@@ -1,0 +1,22 @@
+li{
+    text-align: left;
+}
+
+td{
+    text-align: left;
+}
+
+table{
+    margin-left: 10%;
+}
+
+.deadline{
+    color: red;
+
+}
+
+table{
+    margin-bottom: 5%;
+    margin-left: 10%;
+    border-bottom: solid;
+}
