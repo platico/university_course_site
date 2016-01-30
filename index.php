@@ -12,7 +12,22 @@
         <title>Αρχική Σελίδα</title>
     </head>
     <body>
+        <?php
+        session_start();
 
+
+        $isConnected = $_SESSION['connected'];
+        if($isConnected=='true'){
+            $name = $_SESSION['name'];
+            $role = $_SESSION['role'];
+            echo "<p id='username_info'>Hello <span id='username'>$name</span> ! Your role is: $role <br> <a href='logout.php ' id='log_out'>Log Out</a> </p> ";
+        }
+        else{
+            echo "<p id='username_info'> <a href='login.php'>Login</a> </p>";
+
+        }
+
+        ?>
         <div id="grid_layout">
 
             <header>
@@ -22,11 +37,11 @@
             <div class="left_content">
                 <nav>
                     <ul>
-                        <li> <a href="index.html"> <img src="images/index.png"> </a> </li>
-                        <li> <a href="HTML/announcements.html"> <img src="images/announcements.png"> </a>  </li>
-                        <li> <a href="HTML/communication.html"> <img src="images/communication.png"> </a> </li>
-                        <li> <a href="HTML/documents.html"> <img src="images/documents.png"> </a> </li>
-                        <li> <a href="HTML/homework.html"> <img src="images/homework.png"> </a> </li>
+                        <li> <a href="index.php"> <img src="images/index.png"> </a> </li>
+                        <li> <a href="announcements.php"> <img src="images/announcements.png"> </a>  </li>
+                        <li> <a href="communication.html"> <img src="images/communication.png"> </a> </li>
+                        <li> <a href="documents.html"> <img src="images/documents.png"> </a> </li>
+                        <li> <a href="homework.html"> <img src="images/homework.png"> </a> </li>
                     </ul>
                 </nav>
             </div>

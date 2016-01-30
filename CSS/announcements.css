@@ -12,3 +12,9 @@ table{
 td{
     padding-bottom: 1em;
 }
+
+a{
+    font-size: medium;
+    margin-left: 2%;
+    color: red;
+}
