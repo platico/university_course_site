@@ -3,10 +3,12 @@
  * php script responsible for deleting an announcement
  */
 
-    $id=$_GET['id'];
-    $connect = mysql_connect('localhost','root','password');
-    mysql_select_db('IEEProject',$connect);
+ob_start();
 
-    mysql_query("DELETE FROM Announcements WHERE ID='$id'");    //executes the deleting query
+$id=$_GET['id'];
+$connect = mysql_connect('webpagesdb.it.auth.gr:3306','ieeroot','password');
+mysql_select_db('IEEProject',$connect);
 
-    header('Location: announcements.php');
+mysql_query("DELETE FROM Announcements WHERE ID='$id'");    //executes the deleting query
+
+header('Location: http://platiskp.webpages.auth.gr/PHP/announcements.php');

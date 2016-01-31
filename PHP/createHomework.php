@@ -1,3 +1,8 @@
+<?php
+session_start();
+ob_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +19,6 @@
 
 <?php   //php script that shows the user info in the upper right position
 
-session_start();
 
 
 $isConnected = $_SESSION['connected'];
@@ -29,63 +33,63 @@ else{
 }
 ?>
 
-    <header>
-        <h1>Προσθήκη Εργασίας</h1>
-    </header>
+<header>
+    <h1>Προσθήκη Εργασίας</h1>
+</header>
 
-    <div class="left_content">
-        <nav>
-            <ul>
-                <li> <a href="index.php"> <img src="../images/index.png"> </a> </li>
-                <li> <a href="announcements.php"> <img src="../images/announcements.png"> </a>  </li>
-                <li> <a href="communication.php"> <img src="../images/communication.png"> </a> </li>
-                <li> <a href="documents.php"> <img src="../images/documents.png"> </a> </li>
-                <li> <a href="homework.php"> <img src="../images/homework.png"> </a> </li>
-            </ul>
-        </nav>
-    </div>
+<div class="left_content">
+    <nav>
+        <ul>
+            <li> <a href="../index.php"> <img src="../images/index.png"> </a> </li>
+            <li> <a href="announcements.php"> <img src="../images/announcements.png"> </a>  </li>
+            <li> <a href="communication.php"> <img src="../images/communication.png"> </a> </li>
+            <li> <a href="documents.php"> <img src="../images/documents.png"> </a> </li>
+            <li> <a href="homework.php"> <img src="../images/homework.png"> </a> </li>
+        </ul>
+    </nav>
+</div>
 
-    <div class="right_content">
+<div class="right_content">
 
-        <form method="get" action="">
+    <form method="POST" action="">
 
-            Στόχοι <textarea cols="30" rows="5" name="goalsBox"> </textarea> <br>
-            Ημερομηνία Παράδοσης <input type="date" name="dateBox"><br>
-            Παραδοτέα <textarea cols="30" rows="5" name="deliverablesBox"> </textarea> <br>
-            Θέση Εργασίας <input type="text" name="locationBox"><br>
-            <input type="submit" width="20">
+        Στόχοι <textarea cols="30" rows="5" name="goalsBox"> </textarea> <br>
+        Ημερομηνία Παράδοσης <input type="date" name="dateBox"><br>
+        Παραδοτέα <textarea cols="30" rows="5" name="deliverablesBox"> </textarea> <br>
+        Θέση Εργασίας <input type="text" name="locationBox"><br>
+        <input type="submit" width="20">
 
-        </form>
+    </form>
 
-        <?php   //php script responsible for uploading the homework info
+    <?php   //php script responsible for uploading the homework info
 
-        session_start();
+    session_start();
 
 
-        if($_GET['goalsBox'] !=''){
+    if($_POST['goalsBox'] !=''){
 
-            $goals = $_GET['goalsBox']; //gets the info of the homework
-            $date = $_GET['dateBox'];
-            $deliverables = $_GET['deliverablesBox'];
-            $location = $_GET['locationBox'];
+        $goals = $_POST['goalsBox']; //gets the info of the homework
+        $date = $_POST['dateBox'];
+        $deliverables = $_POST['deliverablesBox'];
+        $location = $_POST['locationBox'];
 
-            $connect = mysql_connect("localhost","root","password");
-            mysql_select_db("IEEProject",$connect);
+        $connect = mysql_connect("webpagesdb.it.auth.gr:3306","ieeroot","password");
+        mysql_select_db("IEEProject",$connect);
 
-            mysql_query("INSERT INTO Homework (deliver_date,Deliverables,Goals,File_Position) VALUES ('$date','$deliverables','$goals','$location')");
-            print mysql_error($connect);
+        mysql_query("INSERT INTO Homework (deliver_date,Deliverables,Goals,File_Position) VALUES ('$date','$deliverables','$goals','$location')");
+        print mysql_error($connect);
 
-            header("Location: homework.php");
+        header("Location: http://platiskp.webpages.auth.gr/PHP/homework.php");
 
-        }
+    }
 
-        ?>
+    ?>
 
-    </div>
+</div>
 
-    <footer>
-        Created by Kostas Platis &copy;
-    </footer>
+<footer>
+    Created by Kostas Platis &copy;
+</footer>
 
 
 </body>

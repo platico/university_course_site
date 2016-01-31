@@ -8,4 +8,4 @@ session_start();
 
 
 $_SESSION["connected"] = 'false';
-header('Location: index.php');
+header('Location: http://platiskp.webpages.auth.gr/index.php');
