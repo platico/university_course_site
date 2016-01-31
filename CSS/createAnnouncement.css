@@ -1,0 +1,28 @@
+textarea{
+    margin-top: 3%;
+    resize: none;
+}
+
+
+input{
+    margin-top: 3%;
+}
+
+
+h2{
+    text-align: center;
+}
+
+form{
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Arimo', sans-serif;
+
+}
+
+
+input[type=submit]{
+    margin-left: 5%;
+    width: 15em;
+    height: 2em;
+}

@@ -3,16 +3,16 @@
 <head>
     <title>Login</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="CSS/main.css">
-    <link rel="stylesheet" type="text/css" href="CSS/login.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/login.css">
 
     <link href='https://fonts.googleapis.com/css?family=Play:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Arimo:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-    <?php
+    <?php //php script that shows the user info in the upper right position
     session_start();
 
 
@@ -35,11 +35,11 @@
     <div class="left_content">
         <nav>
             <ul>
-                <li> <a href="index.php"> <img src="images/index.png"> </a> </li>
-                <li> <a href="announcements.php"> <img src="images/announcements.png"> </a>  </li>
-                <li> <a href="communication.html"> <img src="images/communication.png"> </a> </li>
-                <li> <a href="documents.html"> <img src="images/documents.png"> </a> </li>
-                <li> <a href="homework.html"> <img src="images/homework.png"> </a> </li>
+                <li> <a href="index.php"> <img src="../images/index.png"> </a> </li>
+                <li> <a href="announcements.php"> <img src="../images/announcements.png"> </a>  </li>
+                <li> <a href="communication.php"> <img src="../images/communication.png"> </a> </li>
+                <li> <a href="documents.php"> <img src="../images/documents.png"> </a> </li>
+                <li> <a href="homework.php"> <img src="../images/homework.png"> </a> </li>
             </ul>
         </nav>
     </div>
@@ -47,12 +47,12 @@
     <div class="right_content">
 
 
-        <?php
+        <?php   //php script responsible for the login process
 
         session_start();
 
 
-        if($_GET['usernameBox'] !=''){
+        if($_GET['usernameBox'] !=''){  //if the user has submited it's info
                 $email = $_REQUEST['usernameBox'];
                 $password = $_REQUEST['passwordBox'];
 
@@ -103,11 +103,13 @@
             <input type="submit" name="submit" value="Submit"/>
         </form>
 
+        <footer>
+             Created by Kostas Platis &copy;
+        </footer>
+
+
     </div>
 
-    <footer>
-        <p> Created by Kostas Platis &copy; </p>
-    </footer>
 
 </body>
 

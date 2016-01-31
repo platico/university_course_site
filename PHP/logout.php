@@ -1,4 +1,8 @@
 <?php
+/**
+ * php script that logouts the user
+ */
+
 
 session_start();
 

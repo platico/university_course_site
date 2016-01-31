@@ -2,17 +2,17 @@
 <html lang='en'>
     <head>
         <meta charset='UTF-8'>
-        <link rel='stylesheet' type='text/css' href='CSS/announcements.css'>
-        <link rel='stylesheet' type='text/css' href='CSS/main.css'>
+        <link rel='stylesheet' type='text/css' href='../CSS/announcements.css'>
+        <link rel='stylesheet' type='text/css' href='../CSS/main.css'>
         <link href='https://fonts.googleapis.com/css?family=Play:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Arimo:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
-        <link rel='icon' href='images/favicon.ico' type='image/x-icon'>
+        <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
 
         <title>Ανακοινώσεις</title>
     </head>
     <body>
 
-    <?php
+    <?php //php script that shows the user info in the upper right position
     session_start();
 
 
@@ -37,18 +37,23 @@
                 <h1>Ανακοινώσεις</h1>
             </header>
 
-
-
+        <?php
+            if ($isConnected=="true" && $role=='Tutor'){    //if a user is connected and it's role is Tutor
+                echo "
+                    <a href=\"createAnnouncement.php\">Προσθήκη Νέας Ανακοίνωσης</a>
+                ";
+            }
+        ?>
 
 
             <div class='left_content'>
                 <nav>
                     <ul>
-                        <li> <a href='index.php'> <img src='images/index.png'> </a> </li>
-                        <li> <a href='announcements.html'> <img src='images/announcements.png'> </a>  </li>
-                        <li> <a href='communication.html'> <img src='images/communication.png'> </a> </li>
-                        <li> <a href='documents.html'> <img src='images/documents.png'> </a> </li>
-                        <li> <a href='homework.html'> <img src='images/homework.png'> </a> </li>
+                        <li> <a href='index.php'> <img src='../images/index.png'> </a> </li>
+                        <li> <a href='announcements.html'> <img src='../images/announcements.png'> </a>  </li>
+                        <li> <a href='communication.php'> <img src='../images/communication.png'> </a> </li>
+                        <li> <a href='documents.php'>  <img src='../images/documents.png'> </a> </li>
+                        <li> <a href='homework.php'> <img src='../images/homework.png'> </a> </li>
                     </ul>
                 </nav>
             </div>
@@ -75,7 +80,7 @@
 
                 echo"<h2>Ανακοίνωση $i";
                     if($role == 'Tutor'){   //if the logined user is a tutor
-                        echo"<a href='deleteannouncement.php?id=$id'>Διαγραφή</a> <a href='updateannouncement.php?id=$id'>Επεξεργασία</a> ";
+                        echo "<a href='deleteannouncement.php?id=$id'>Διαγραφή</a> <a href='updateannouncement.php?id=$id'>Επεξεργασία</a> ";
                     }
 
                     echo"</h2>
@@ -97,13 +102,12 @@
 
         ?>
 
-
+             <footer>
+                 Created by Kostas Platis &copy;
+             </footer>
 
         </div>
 
-        <footer>
-            <p> Created by Kostas Platis &copy; </p>
-        </footer>
 
     </body>
 </html>

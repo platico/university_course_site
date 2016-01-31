@@ -2,11 +2,11 @@
 <html lang='en'>
     <head>
         <meta charset='UTF-8'>
-        <link rel='stylesheet' type='text/css' href='CSS/updateannouncement.css'>
-        <link rel='stylesheet' type='text/css' href='CSS/main.css'>
+        <link rel='stylesheet' type='text/css' href='../CSS/updateannouncement.css'>
+        <link rel='stylesheet' type='text/css' href='../CSS/main.css'>
         <link href='https://fonts.googleapis.com/css?family=Play:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Arimo:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
-        <link rel='icon' href='images/favicon.ico' type='image/x-icon'>
+        <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
 
         <title>Ανακοινώσεις</title>
     </head>
@@ -62,6 +62,11 @@
 
 
         </section>
+
+        <footer>
+            Created by Kostas Platis &copy;
+        </footer>
+
 
     </body>
 </html>

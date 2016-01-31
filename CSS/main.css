@@ -94,21 +94,15 @@ nav ul{
 
 
 footer{
-
-    color: #FFFCF2;
-    position: fixed;
-    bottom: 0;
-    right: 1%;
-    clear: none;
-    float: left;
-}
-
-
-footer > p{
-    font-size: medium;
     font-family: 'Play', sans-serif;
-    font-weight: bold;
+    background-color: #5200cc;
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 1%;
+
 }
+
+
 
 a:hover{
     color: slateblue;
