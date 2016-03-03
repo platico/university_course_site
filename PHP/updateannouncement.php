@@ -24,7 +24,7 @@
 
     $id = $_GET['id'];  //if its load gets the id
     $annID = $_GET['idBox'];    //annID is used for the updating form
-    $connect = mysql_connect('webpagesdb.it.auth.gr:3306','ieeroot','password');
+    $connect = mysql_connect(); //requires DB credentials
     mysql_select_db('IEEProject',$connect);
 
     $announcements = mysql_query("SELECT Subject,Date_Field,Body FROM Announcements WHERE ID='$id'"); //gets the info of the announcement
