@@ -6,7 +6,7 @@
 ob_start();
 
 $id=$_GET['id'];
-$connect = mysql_connect('webpagesdb.it.auth.gr:3306','ieeroot','password');
+$connect = mysql_connect();   //requires DB credentials
 mysql_select_db('IEEProject',$connect);
 
 mysql_query("DELETE FROM Announcements WHERE ID='$id'");    //executes the deleting query
