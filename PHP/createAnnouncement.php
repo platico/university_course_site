@@ -70,7 +70,7 @@ else{
         $body = $_POST['bodyBox'];
         $date = $_POST['dateBox'];
 
-        $connect = mysql_connect("webpagesdb.it.auth.gr:3306","ieeroot","password");
+        $connect = mysql_connect();     //requires DB credentials
         mysql_select_db("IEEProject",$connect);
 
         mysql_query("INSERT INTO Announcements (Subject,Date_Field,Body) VALUES ('$subject','$date','$body')");
