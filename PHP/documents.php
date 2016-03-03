@@ -63,7 +63,7 @@ else{
     <div class="right_content">
         <?php   //php fetcher of files
 
-        $connect = mysql_connect('webpagesdb.it.auth.gr:3306','ieeroot','password');
+        $connect = mysql_connect(); //requires DB credentials
 
         mysql_select_db('IEEProject',$connect);
 
