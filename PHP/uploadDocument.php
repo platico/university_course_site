@@ -28,7 +28,7 @@ else {
     print $content;
     fclose($fp);
 */
-$connect = mysql_connect('webpagesdb.it.auth.gr:3306','ieeroot','password');
+$connect = mysql_connect();   //requires DB credentials
 mysql_select_db('IEEProject',$connect);
 mysql_query("INSERT INTO Files (Title,Description,File) VALUES ('$title','$description','$position')" );
 print mysql_error($connect);
