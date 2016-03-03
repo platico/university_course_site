@@ -62,7 +62,7 @@ else{
 
         <?php
 
-        $connect = mysql_connect('webpagesdb.it.auth.gr:3306','ieeroot','password');
+        $connect = mysql_connect();     //requires username-password
 
         mysql_select_db('IEEProject',$connect);
 
