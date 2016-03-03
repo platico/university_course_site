@@ -73,7 +73,7 @@ else{
         $deliverables = $_POST['deliverablesBox'];
         $location = $_POST['locationBox'];
 
-        $connect = mysql_connect("webpagesdb.it.auth.gr:3306","ieeroot","password");
+        $connect = mysql_connect();     //requires DB credentials
         mysql_select_db("IEEProject",$connect);
 
         mysql_query("INSERT INTO Homework (deliver_date,Deliverables,Goals,File_Position) VALUES ('$date','$deliverables','$goals','$location')");
